@@ -1,0 +1,34 @@
+body{
+  background-image: url('https://img.freepik.com/free-photo/dark-stormy-clouds_181624-61.jpg?w=1060&t=st=1713940370~exp=1713940970~hmac=fa5579ebb99cfc860c4b85a6efa896ecf28f934693ef981d840e98b46f92f13d');
+  background-size: cover;
+}
+.App{
+  height: 100vh;
+  width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+  background-color: rgb(237, 237, 237);
+  height: 34rem;
+  width: 30rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-container{
+  min-width: fit-content;
+  margin-top:7rem;
+}
+.data-container
+{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+p{
+  color: red;
+}
