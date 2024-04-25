@@ -32,3 +32,21 @@ align-items: center;
 p{
   color: red;
 }
+
+
+
+/* .container
+{
+  height:auto;
+  width:auto;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10rem;
+}
+.inner-div{
+  background-color: red;
+  height: 40px;
+  width:50px;
+  margin: 5px;
+} */

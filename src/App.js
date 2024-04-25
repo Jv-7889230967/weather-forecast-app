@@ -14,7 +14,14 @@ function App() {
   const [windspeed,setWindSpeed]=useState('');
   const [humidity,setHumidity]=useState('');
   const [show,setShow]=useState(false);
-  const [error,setError]=useState('')
+  const [error,setError]=useState('');
+  var props={
+    weather:weather,
+    temperature:temperature,
+    windspeed:windspeed,
+    humidity:humidity
+  }
+
 
   const Handleclick=async()=>{
     try {
@@ -39,7 +46,7 @@ function App() {
       <Button variant="contained" onClick={Handleclick}><SearchIcon/></Button>
     </div>
     <div className='data-container'>
-     {show ?<WeatherTimeline weather={weather} temperature={temperature} windspeed={windspeed} humidity={humidity}/>:<p>Please enter a valid place</p>}
+     {show ?<WeatherTimeline {...props} />:<p>Please enter a valid place</p>}
     </div>
       </div>
     </div>

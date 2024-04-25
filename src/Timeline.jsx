@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -15,7 +14,7 @@ import ReorderIcon from '@mui/icons-material/Reorder';
 import OpacityIcon from '@mui/icons-material/Opacity';
 import Typography from '@mui/material/Typography';
 
-export default function WeatherTimeline(props) {
+export default function WeatherTimeline({weather,temperature,windspeed,humidity}) {
   return (
     <Timeline position="alternate">
       <TimelineItem>
@@ -25,12 +24,12 @@ export default function WeatherTimeline(props) {
           variant="body2"
           color="text.secondary"
         >
-          {props.weather}
+          {weather}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color='primary'>
-            {props.weather!=='clear sky'?<CloudIcon/>:<LightModeIcon/>}
+            {weather!=='clear sky'?<CloudIcon/>:<LightModeIcon/>}
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -47,12 +46,12 @@ export default function WeatherTimeline(props) {
           variant="body2"
           color="text.secondary"
         >
-         {props.temperature}*C
+         {temperature}*C
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color="primary">
-            {props.temperature>25 ?<ThermostatIcon />:<AcUnitIcon/>}
+            {temperature>25 ?<ThermostatIcon />:<AcUnitIcon/>}
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -69,12 +68,12 @@ export default function WeatherTimeline(props) {
           variant="body2"
           color="text.secondary"
         >
-         {props.windspeed} m/s
+         {windspeed} m/s
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color="primary">
-            {props.windspeed>7?<AirIcon/>:<ReorderIcon/>}
+            {windspeed>7?<AirIcon/>:<ReorderIcon/>}
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -91,7 +90,7 @@ export default function WeatherTimeline(props) {
           variant="body2"
           color="text.secondary"
         >
-         {props.humidity} %
+         {humidity} %
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
