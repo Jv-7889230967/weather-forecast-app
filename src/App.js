@@ -2,8 +2,8 @@ import './App.css';
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-import { getData, getWeeklyData } from './getData';
-import { useState } from 'react';
+import { dataByCoord, getData, getWeeklyData } from './getData';
+import { useEffect, useState } from 'react';
 import WeatherTimeline from './components/Timeline';
 import Loader from './components/Loader';
 import WeeklyData from './components/WeeklyData';
@@ -36,7 +36,6 @@ function App() {
         humidity: currWeather.main.humidity,
       })
       setWeeklyData(weekData.list);
-      // console.log(weekData.list)
       setShow(true);
     } catch (error) {
       setLoading(false);
@@ -50,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <h3 style={{fontSize:'30px'}}>Weather Forecast</h3>
+        <h3 style={{ fontSize: '30px' }}>Weather Forecast</h3>
         <div className='input-container'>
           <Input placeholder="Enter Location" inputProps={ariaLabel} onChange={(e) => { setCity(e.target.value) }} />
           <Button variant="contained" onClick={Handleclick}><SearchIcon /></Button>
@@ -63,7 +62,7 @@ function App() {
               show ? (
                 <>
                   <WeatherTimeline {...data} />
-                  <WeeklyData weeklyData={weeklyData}/>
+                  <WeeklyData weeklyData={weeklyData} />
                 </>
               ) : (
                 error ? (

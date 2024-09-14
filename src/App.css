@@ -11,8 +11,8 @@ align-items: center;
 }
 .container{
   background-color: rgb(237, 237, 237);
-  height: 34rem;
-  width: 30rem;
+  height: 40rem;
+  width: 34rem;
   gap: 15px;
   border-radius: 1rem;
   display: flex;
