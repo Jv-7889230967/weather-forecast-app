@@ -13,22 +13,34 @@ align-items: center;
   background-color: rgb(237, 237, 237);
   height: 34rem;
   width: 30rem;
+  gap: 15px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .input-container{
-  min-width: fit-content;
-  margin-top:7rem;
+  width: full;
+  margin-top: 10px;
 }
 .data-container
 {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
   justify-content: center;
-  height: auto;
+  align-items: center;
+  height: 400px;
+  min-height: 150px;
   width: 100%;
 }
 p{
   color: red;
+}
+.weekly-data-container
+{
+  height: fit-content;
+  width: full;
+  gap: 10px;
 }
