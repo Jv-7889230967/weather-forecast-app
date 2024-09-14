@@ -17,7 +17,7 @@ export default function WeeklyData({ weeklyData }) {
         </AccordionSummary>
 
         <AccordionDetails>
-          <div style={{height:'fit',width:'full',display:'flex',flexDirection:'column' ,alignItems:'center'}}>
+          <div style={{height:'fit',width:'full',display:'flex',flexDirection:'column'}}>
             {
               weeklyData?.map((data) => {
                 const currDate=new Date(data.dt_txt);
